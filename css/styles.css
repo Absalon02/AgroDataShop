@@ -1,0 +1,95 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; /* Fondo neutro para el resto de la página */
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;         /* aseguramos que empiece desde el borde izquierdo */
+            width: 100vw;    /* ancho completo de la ventana */
+            height: 100px;   /* Altura limitada para el header */
+            background: linear-gradient(45deg, rgba(76, 175, 80, 0.9), rgba(129, 199, 132, 0.9));
+            filter: blur(0.5px); /* Efecto difuminado solo en el header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .content {
+            margin-top: 120px; /* Espacio para el header fijo */
+            padding: 20px;
+            text-align: center; /* Párrafos centrados */
+        }
+        .content p {
+            font-size: 1.5em; /* Letra más grande en párrafos */
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            header {
+                height: 80px; /* Header más pequeño en móviles */
+            }
+            h1 {
+                font-size: 2em; /* Título más pequeño en móviles */
+            }
+            .content {
+                margin-top: 100px;
+                padding: 15px;
+            }
+            .content p {
+                font-size: 1.3em; /* Párrafos ligeramente más pequeños en móviles */
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* Aún más pequeño en pantallas muy pequeñas */
+            }
+            .content p {
+                font-size: 1.2em;
+            }
+        }
+        .main-container {
+            display: flex;
+            gap: 20px; /* espacio entre tabla y columna lateral */
+            margin-top: 20px;
+        }
+
+        .table-container {
+            flex: 0 0 70%; /* tabla ocupa 70% */
+            margin: 0;      /* aseguramos que no esté centrada */
+        }
+
+        .sidebar {
+            flex: 0 0 30%; /* columna lateral ocupa 30% */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Estilos de la tabla */
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        
